@@ -20,7 +20,6 @@ const History = ({ getAllExercises, exercises, removeExercise, updateExecise }) 
                 <div className="col-3">
                     <b>calculator history</b>
                     <div className="border border-secondary w-75">
-                        {/* <button onClick={(e) => getAllExercises()}>getAllExercises</button> */}
                         {exercises.map((value, index) => {
                             return <>
                                 {index > 0 &&
