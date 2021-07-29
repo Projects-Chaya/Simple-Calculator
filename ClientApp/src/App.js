@@ -17,6 +17,7 @@ function App() {
   const [exercises, setExercises] = useState([{}])
   const [findItem, setFindItem] = useState({})
   const [updateExercise, setUpdateExercise] = useState(false)
+  
   //update when change part of from
   function onChangeForm(e) {
     setFindItem({})
@@ -41,7 +42,6 @@ function App() {
 
   //create exercise when the user click on "calculate from server"
   function CreateExercises() {
-    debugger
     if (updateExercise === true) {
       updateExecise(exercise, findItem)
         .then(response => {
@@ -82,7 +82,6 @@ function App() {
     findExecise(item)
       .then(e => {
         setFindItem(e)
-        // setMath()
         setUpdateExercise(true)
       })
       .then(e => { alert("Updeat...") })
