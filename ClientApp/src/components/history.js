@@ -8,11 +8,7 @@ import '../stayles/history.css'
 
 
 
-const History = ({ getAllExercises, exercises, removeExercise, updateExecise }) => {
-
-    useEffect(() => {
-        getAllExercises()
-    },[])
+const History = ({ getAllExercises, exercises, removeExercise, updateExecise }) => 
 
     return (
         <div>
