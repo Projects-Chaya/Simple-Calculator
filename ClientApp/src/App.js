@@ -17,7 +17,8 @@ function App() {
   const [exercises, setExercises] = useState([{}])
   const [findItem, setFindItem] = useState({})
   const [updateExercise, setUpdateExercise] = useState(false)
-  
+  const [activeHistory, setActiveHistory] = useState(false)
+
   //update when change part of from
   function onChangeForm(e) {
     setFindItem({})
@@ -78,21 +79,24 @@ function App() {
   }
   //update exercise שccording to the user's choice
   function FindExercise(item) {
-    debugger
     findExecise(item)
       .then(e => {
         setFindItem(e)
+        // setMath()
         setUpdateExercise(true)
       })
       .then(e => { alert("Updeat...") })
 
   }
-
+  useEffect(() => {
+    if(activeHistory==true)
+       GetAllExercises()
+  }, [activeHistory])
+  
   //disables the operation of the button and serves as a tool to help activate the history
   function OnkeydownHandler(event) {
     switch (event.keyCode) {
       case 116: // 'F5'
-        debugger
         event.preventDefault();
         window.status = "F5 disabled";
         setF5(true)
@@ -113,6 +117,7 @@ function App() {
         />
         {f5 &&
           <>
+            {setActiveHistory(true)}
             <History
               getAllExercises={GetAllExercises}
               removeExercise={RemoveExercise}
