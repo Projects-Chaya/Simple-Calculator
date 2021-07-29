@@ -1,0 +1,46 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  width: 10%;
+}
+label{
+    color: blueviolet !important;
+    width: 10%;
+} 
+p{
+    color: blue;
+    margin-bottom: 0% !important;
+}
+
+select {
+    width: 19%;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 1px solid black;
+    background: url('../image/tr.png') no-repeat right white;
+    -webkit-appearance: none;
+    font-weight:bold;
+    text-indent: 24%;
+    line-height: 100%;
+}
+.exercise{
+    padding-bottom: 0% !important;
+}
+.textdown{
+   margin-left: 9%;
+}
+.btncalaulate{
+  margin-left: -4% !important;
+  cursor: pointer;
+}
+.history{
+  margin-left: -1%;
+}
+.withoutHistory{
+  margin-left: 13%;
+}

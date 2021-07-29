@@ -1,0 +1,12 @@
+.arrow  path {
+    stroke: black;
+    stroke-width: 3%;
+  }
+ .icon{
+     cursor: pointer;
+     font-size: 20px  !important;
+
+ } 
+ .exercise{
+color: black;
+ }
